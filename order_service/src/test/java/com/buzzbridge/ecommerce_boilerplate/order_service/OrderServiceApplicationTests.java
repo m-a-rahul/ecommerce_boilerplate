@@ -35,13 +35,9 @@ class OrderServiceApplicationTests {
 	@Test
 	void testOrderPlacement() {
 		String requestBody = """
-					{
-						"skuCode": "iphone_15",
-						"price": 1000,
-						"quantity": 1
-					}
+					{"skuCode":"iphone_16","price":2000,"quantity":1,"userDetails":{"email":"test1user@gmail.com"}}
 				""";
-		InventoryClientStub.stubInventoryCall("iphone_15",1);
+		InventoryClientStub.stubInventoryCall("iphone_16",1);
 		String responseBody = RestAssured.given()
 				.contentType("application/json")
 				.body(requestBody)
