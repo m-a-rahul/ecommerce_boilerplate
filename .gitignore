@@ -43,3 +43,10 @@ grafana/
 mysql/
 data/
 docker/
+
+
+!docker/grafana/datasource.yml
+!docker/grafana/dashboard.json
+!docker/prometheus/prometheus.yml
+!docker/tempo/tempo.yml
+!docker/inventory-mysql/init.sql
